@@ -20,7 +20,4 @@ public class Main {
 
         System.out.println("l2: " + l2);
     }
-
-
-
 }
