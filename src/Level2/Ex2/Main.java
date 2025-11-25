@@ -11,9 +11,16 @@ public class Main {
         Restaurant r2 = new Restaurant("La cova fumada", 50);
         Restaurant r3 = new Restaurant("La Balmesina", 54);
 
-        Set<Restaurant> ReverseOrderedRestaurantGuide = new TreeSet<>(Collections.reverseOrder());
-        ReverseOrderedRestaurantGuide.addAll(List.of(r1, r2, r3));
+        Set<Restaurant> NameDescendingOrderedRestaurantGuide = new TreeSet<>(List.of(r1, r2, r3));
 
-        System.out.println(ReverseOrderedRestaurantGuide);
+        System.out.println("DESCENDING LEXICOGRAPHICALLY NAME'S ORDERING:");
+        System.out.println(NameDescendingOrderedRestaurantGuide + "\n");
+
+        Set<Restaurant> ScoreOrderedRestaurantGuide =  new TreeSet<>(Restaurant.BY_SCORE);
+        ScoreOrderedRestaurantGuide.addAll(NameDescendingOrderedRestaurantGuide);
+
+        System.out.println("DESCENDING SCORE'S ORDERING:");
+        System.out.println(ScoreOrderedRestaurantGuide);
+
     }
 }
