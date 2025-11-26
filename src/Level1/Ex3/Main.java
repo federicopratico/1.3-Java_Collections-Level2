@@ -45,7 +45,7 @@ public class Main {
             System.err.println(e.getMessage());
         }
     }
-    // Scrivere la merda di file scores -> una funzione
+
     static void writeResult(Player p) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter("classification.txt", true));
         bw.write("Player: " + p.getName() + " " + p.getScore() + "/10");
@@ -53,7 +53,6 @@ public class Main {
         bw.close();
     }
 
-    // Leggere sta merda di file txt -> una funzione
     static void readCountries(Map<String, String> m, String fileName) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         String line;
